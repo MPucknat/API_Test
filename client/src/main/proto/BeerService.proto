@@ -1,0 +1,32 @@
+syntax = "proto3";
+option java_multiple_files=true;
+package gRPC;
+
+message BeerIdRequest {
+  int32 id = 1;
+}
+
+message BeersRequest {
+  int32 amount = 1;
+}
+
+message BeersResponse {
+  repeated BeerMessage beer = 1;
+}
+
+message BeerMessage {
+  int32 id = 1;
+  string name = 2;
+  string hop = 3;
+  string yeast = 4;
+  string mal = 5;
+  string style = 6;
+}
+
+message Empty {}
+
+service BeerService {
+  rpc getBeer(Empty) returns (BeerMessage);
+  rpc getBeerWithId(BeerIdRequest) returns (BeerMessage);
+  rpc getBeers(BeersRequest) returns (BeersResponse);
+}

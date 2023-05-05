@@ -1,0 +1,15 @@
+version: '3'
+services:
+  server:
+    build: server
+    ports:
+      - "8282:8282"
+    environment:
+      - PORT=8282
+  client:
+    ports:
+      - "8080:8080"
+    build: client
+    environment:
+      - PORT=8080
+      - SERVER_URL=http://server:8282

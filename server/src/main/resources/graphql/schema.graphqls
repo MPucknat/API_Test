@@ -1,0 +1,15 @@
+type Query {
+    getAllBeers: [Beer!]!
+    beers(amount: Int): [Beer!]!
+    beerID(id: ID): Beer
+    beer: Beer
+}
+
+type Beer {
+    id: ID
+    name: String
+    yeast: String
+    malt: String
+    style: String
+    hop: String
+}
