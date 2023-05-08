@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.doubleslash</groupId>
+  <artifactId>api_test</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>api_test</name>
+  <description>Demo project for Spring Boot</description>
+
+  <profiles>
+    <profile>
+      <id>api_test</id>
+      <modules>
+        <module>client</module>
+        <module>server</module>
+      </modules>
+    </profile>
+  </profiles>
+</project>
