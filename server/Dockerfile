@@ -6,4 +6,5 @@ COPY target/*.jar /app/server.jar
 
 CMD ["java", "-jar", "/app/server.jar"]
 
-EXPOSE 8080
+EXPOSE 8282
+EXPOSE 9090

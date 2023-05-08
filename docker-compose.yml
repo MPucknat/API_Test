@@ -4,6 +4,7 @@ services:
     build: server
     ports:
       - "8282:8282"
+      - "9090:9090"
     environment:
       - PORT=8282
   client:
@@ -13,3 +14,5 @@ services:
     environment:
       - PORT=8080
       - SERVER_URL=http://server:8282
+      - GRAPHQL_URL=http://server:8282/graphql
+      - GRPC_URL=static://server:9090
