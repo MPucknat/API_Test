@@ -2,12 +2,8 @@ FROM openjdk:17-jdk
 
 WORKDIR /app
 
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
+COPY target/*.jar /app/client.jar
 
-RUN ./mvnw dependency:resolve
-
-COPY src ./src
-CMD ["./mvnw", "spring-boot:run"]
+CMD ["java", "-jar", "/app/client.jar"]
 
 EXPOSE 8080
