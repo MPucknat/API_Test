@@ -1,8 +1,11 @@
 # API_Test
 
 ## Usage
+- The server listens on port 8282
+- The client listens on port 8080
+- both projects have a swagger ui on the root endpoint
 
-Example post request:
+Example post request to the client:
 ````json
 {
   "method": "amount",
